@@ -14,6 +14,7 @@ RUN yum -y groupinstall "Development Tools"
 RUN yum -y update
 RUN yum clean all
 
+# Install Redis
 RUN yum -y install redis
 
 EXPOSE 6379
