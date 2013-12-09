@@ -21,10 +21,6 @@ ADD 10gen.repo /etc/mongod.conf
 # Install MongoDB
 RUN yum -y install mongo-10gen-server.x86_64 mongo-10gen.x86_64 --enablerepo=10gen
 
-# Add mongod.conf
-ADD mongod.conf /etc/mongod.conf
-
-
 EXPOSE 27017
 
 CMD ["/usr/bin/mongod", "--master", "--port", "27017", "--dbpath /var/lib/mongo"]
