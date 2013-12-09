@@ -1,6 +1,15 @@
 Dockerfile Android Development Environment
 ===========
 
+ * OpenJDK 7
+ * Android SDK r22.3
+ * Android NDK r9b
+ * Ant 1.9.2
+ * Maven 3.1.1
+ * Gradle 1.9
+
+Prerequisites
+
 ### Docker Index pull
 
     docker pull wasabeef/android
