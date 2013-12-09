@@ -35,31 +35,26 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tool
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-18 --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-19 --no-ui --force -a
-
-# Set ANDROID_HOME
-ENV ANDROID_HOME /usr/local/android-sdk-linux
-RUN export PATH=$PATH:$ANDROID_HOME/tools
-RUN export PATH=$PATH:$ANDROID_HOME/platform-tools
+RUN export PATH=$PATH:/usr/local/android-sdk-linux/tools
+RUN export PATH=$PATH:/usr/local/android-sdk-linux/platform-tools
 
 # Install Apache-Ant
 RUN cd /usr/local/ && curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist//ant/binaries/apache-ant-1.9.2-bin.tar.gz && tar xvf apache-ant-1.9.2-bin.tar.gz
-# Set ANT_HOME
-ENV ANT_HOME /usr/local/apache-ant-1.9.2
-RUN export PATH=$PATH:$ANT_HOME/bin
+RUN export PATH=$PATH:/usr/local/apache-ant-1.9.2/bin
 
 # Install Maven
 RUN cd /usr/local/ && curl -L -O http://ftp.tsukuba.wide.ad.jp/software/apache/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz && tar xvf apache-maven-3.1.1-bin.tar.gz
-# Set MAVEN_HOME
-ENV MAVEN_HOME /usr/local/apache-maven-3.1.1
-RUN export PATH=$PATH:$MAVEN_HOME/bin
+RUN export PATH=$PATH:/usr/local/apache-maven-3.1.1/bin
 
 # Install Gradle
 RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.9-all.zip && unzip gradle-1.9-all.zip
-# Set GRADLE_HOME
+RUN export PATH=$PATH:/usr/local/gradle-1.9bin
+
+# Environment variables
+ENV ANDROID_HOME /usr/local/android-sdk-linux
+ENV ANT_HOME /usr/local/apache-ant-1.9.2
+ENV MAVEN_HOME /usr/local/apache-maven-3.1.1
 ENV GRADLE_HOME /usr/local/gradle-1.9
-RUN export PATH=$PATH:$GRADLE_HOME/bin
-
-
 
 # Clean up
 RUN rm -rf /usr/local/android-sdk_r22.3-linux.tgz
