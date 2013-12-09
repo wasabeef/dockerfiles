@@ -19,4 +19,4 @@ RUN yum -y install memcached
 
 EXPOSE 11211
 
-CMD ["/usr/bin/memcached", "-u", "memcached", "-m", "128", "-p", "11211"]
+CMD ["/usr/bin/memcached", "-u", "memcached", "-m", "128", "-p", "11211", "-c", "1024"]
