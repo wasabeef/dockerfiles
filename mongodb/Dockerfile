@@ -16,7 +16,7 @@ RUN yum clean all
 
 
 # Add 10gen repository
-ADD 10gen.repo /etc/mongod.conf
+ADD 10gen.repo /etc/yum.repos.d/10gen.repo
 
 # Install MongoDB
 RUN yum -y install mongo-10gen-server.x86_64 mongo-10gen.x86_64 --enablerepo=10gen
