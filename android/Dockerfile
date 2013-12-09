@@ -5,14 +5,13 @@ FROM centos
 MAINTAINER wasabeef <dadadada.chop@gmail.com>
 
 # Epel
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+# RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
 # Install Development Tools
 RUN yum -y groupinstall "Development Tools"
 
 # yum update
-RUN yum -y update
-RUN yum clean all
+# RUN yum -y update
 
 # Install java (OpenJDK)
 RUN yum -y install java-1.7.0-openjdk-devel
@@ -67,4 +66,4 @@ RUN rm -rf /usr/local/android-ndk-r9b-linux-x86_64.tar.bz2
 RUN rm -rf /usr/local/apache-ant-1.9.2-bin.tar.gz
 RUN rm -rf /usr/local/apache-maven-3.1.1-bin.tar.gz
 RUN rm -rf /usr/local/gradle-1.9-all.zip
-
+RUN yum clean all
