@@ -11,12 +11,20 @@ Dockerfile Android Development Environment
 
 ## Android SDK
 
+    Version : r22.3
+    Install Location : /usr/local/android-sdk-linux
 
 ## Apache Ant
 
-    apache-ant-1.9.2
-    path : /usr/local/apache-ant-1.9.2
+    Version : 1.9.2
+    Install Location : /usr/local/apache-ant-1.9.2
 
 ## Apache Maven
 
+    Version : 3.1.1
+    Install Location : /usr/local/apache-maven-3.1.1
+
 ## Gradle
+
+    Version : 1.9
+    Install Location : /usr/local/gradle-1.9
