@@ -52,7 +52,7 @@ RUN export PATH=$PATH:/usr/local/apache-maven-3.1.1/bin
 
 # Install Gradle
 RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.9-all.zip && unzip gradle-1.9-all.zip
-RUN export PATH=$PATH:/usr/local/gradle-1.9bin
+RUN export PATH=$PATH:/usr/local/gradle-1.9/bin
 
 # Environment variables
 ENV ANDROID_HOME /usr/local/android-sdk-linux
