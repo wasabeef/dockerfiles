@@ -14,7 +14,7 @@ RUN yum -y groupinstall "Development Tools"
 RUN yum -y update
 RUN yum clean all
 
-# Install Redis
+# Install Memcached
 RUN yum -y install memcached
 
 EXPOSE 11211
