@@ -13,8 +13,8 @@ Dockerfile memcached
 ### Process check
 
     docker ps
-    CONTAINER ID  IMAGE                   COMMAND               CREATED        STATUS         PORTS                NAMES
-    b19630838585  wasa/mem:latest         /usr/bin/memcached -  3 seconds ago  Up 2 seconds   0.0.0.0:49161->11211/tcp   desperate_babbage  backstabbing_davinci
+    CONTAINER ID  IMAGE                     COMMAND               CREATED   STATUS         PORTS                NAMES
+    b19630838585  wasabeef/memcached:latest /usr/bin/memcached -  3 seconds ago  Up 2 seconds   0.0.0.0:49161->11211/tcp   desperate_babbage  backstabbing_davinci
 
 
 ### Operation check
