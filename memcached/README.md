@@ -1,4 +1,4 @@
-Dockerfile redis
+Dockerfile memcached
 ===========
 
 ### Docker Index pull
