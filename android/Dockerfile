@@ -26,12 +26,8 @@ RUN yum -y install ncurses-devel.i686
 RUN yum -y install libX11-devel.i686
 RUN yum -y install libXrender.i686
 
-# Change Direcotry
-RUN cd /usr/local/
-
 # Download Android SDK
-RUN curl -L -O http://dl.google.com/android/android-sdk_r22.3-linux.tgz
-RUN tar xvf android-sdk_r22.3-linux.tgz
+RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r22.3-linux.tgz && tar xvf android-sdk_r22.3-linux.tgz
 
 # Donwload Android tools and 
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter extra --no-ui --force -a
@@ -46,22 +42,23 @@ RUN export PATH=$PATH:$ANDROID_HOME/tools
 RUN export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Install Apache-Ant
-RUN curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist//ant/binaries/apache-ant-1.9.2-bin.tar.gz
-RUN tar xvf apache-ant-1.9.2-bin.tar.gz
+RUN cd /usr/local/ && curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist//ant/binaries/apache-ant-1.9.2-bin.tar.gz && tar xvf apache-ant-1.9.2-bin.tar.gz
+# Set ANT_HOME
 ENV ANT_HOME /usr/local/apache-ant-1.9.2
 RUN export PATH=$PATH:$ANT_HOME/bin
 
 # Install Maven
-RUN curl -L -O http://ftp.tsukuba.wide.ad.jp/software/apache/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz
-RUN tar xvf apache-maven-3.1.1-bin.tar.gz
+RUN cd /usr/local/ && curl -L -O http://ftp.tsukuba.wide.ad.jp/software/apache/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz && tar xvf apache-maven-3.1.1-bin.tar.gz
+# Set MAVEN_HOME
 ENV MAVEN_HOME /usr/local/apache-maven-3.1.1
 RUN export PATH=$PATH:$MAVEN_HOME/bin
 
 # Install Gradle
-RUN curl -L -O http://services.gradle.org/distributions/gradle-1.9-all.zip
-RUN unzip gradle-1.9-all.zip
+RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.9-all.zip && unzip gradle-1.9-all.zip
+# Set GRADLE_HOME
 ENV GRADLE_HOME /usr/local/gradle-1.9
 RUN export PATH=$PATH:$GRADLE_HOME/bin
+
 
 
 # Clean up
