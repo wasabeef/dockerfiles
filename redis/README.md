@@ -1,7 +1,7 @@
 Dockerfile redis
 ===========
 
-### pull
+### Docker Index pull
 
     docker pull wasabeef/redis
 
