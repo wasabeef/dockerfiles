@@ -8,7 +8,6 @@ Dockerfile Android Development Environment
  * Maven 3.1.1
  * Gradle 1.9
 
-Prerequisites
 
 ### Docker Index pull
 
