@@ -63,6 +63,7 @@ ENV GRADLE_HOME /usr/local/gradle-1.9
 
 # Clean up
 RUN rm -rf /usr/local/android-sdk_r22.3-linux.tgz
+RUN rm -rf /usr/local/android-ndk-r9b-linux-x86_64.tar.bz2
 RUN rm -rf /usr/local/apache-ant-1.9.2-bin.tar.gz
 RUN rm -rf /usr/local/apache-maven-3.1.1-bin.tar.gz
 RUN rm -rf /usr/local/gradle-1.9-all.zip
