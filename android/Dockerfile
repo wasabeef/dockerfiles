@@ -67,3 +67,5 @@ RUN rm -rf /usr/local/apache-ant-1.9.2-bin.tar.gz
 RUN rm -rf /usr/local/apache-maven-3.1.1-bin.tar.gz
 RUN rm -rf /usr/local/gradle-1.9-all.zip
 RUN yum clean all
+
+CMD ["--help"]
