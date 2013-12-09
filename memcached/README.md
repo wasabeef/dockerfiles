@@ -1,7 +1,7 @@
 Dockerfile redis
 ===========
 
-### Docker index pull
+### Docker Index pull
 
     docker pull wasabeef/memcached
 
