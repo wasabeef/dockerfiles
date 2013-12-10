@@ -1,4 +1,4 @@
-# Version 1.0.1
+# Version 1.0.0
 
 FROM centos
 
@@ -53,12 +53,12 @@ ENV ANDROID_NDK_HOME /usr/local/android-ndk-r9b
 ENV ANT_HOME /usr/local/apache-ant-1.9.2
 ENV MAVEN_HOME /usr/local/apache-maven-3.1.1
 ENV GRADLE_HOME /usr/local/gradle-1.9
-ENV PATH "$PATH:$ANDROID_HOME/tools"
-ENV PATH "$PATH:$ANDROID_HOME/platform-tools"
-ENV PATH "$PATH:$ANDROID_NDK_HOME"
-ENV PATH "$PATH:$ANT_HOME/bin"
-ENV PATH "$PATH:$MAVEN_HOME/bin"
-ENV PATH "$PATH:$GRADLE_HOME/bin"
+ENV PATH $PATH:$ANDROID_HOME/tools
+ENV PATH $PATH:$ANDROID_HOME/platform-tools
+ENV PATH $PATH:$ANDROID_NDK_HOME
+ENV PATH $PATH:$ANT_HOME/bin
+ENV PATH $PATH:$MAVEN_HOME/bin
+ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Clean up
 RUN rm -rf /usr/local/android-sdk_r22.3-linux.tgz
