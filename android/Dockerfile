@@ -45,7 +45,7 @@ RUN cd /usr/local/ && curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist//a
 RUN cd /usr/local/ && curl -L -O http://ftp.tsukuba.wide.ad.jp/software/apache/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz && tar xvf apache-maven-3.1.1-bin.tar.gz
 
 # Install Gradle
-RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.8-all.zip && unzip gradle-1.8-all.zip
+RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.8-all.zip && unzip -o gradle-1.8-all.zip
 
 # Environment variables
 ENV ANDROID_HOME /usr/local/android-sdk-linux
