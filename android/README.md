@@ -6,7 +6,7 @@ Dockerfile Android Development Environment
  * Android NDK r9b
  * Ant 1.9.2
  * Maven 3.1.1
- * Gradle 1.9
+ * Gradle 1.8
 
 
 ### Docker Index pull
