@@ -39,5 +39,5 @@ Dockerfile Android Development Environment
 
 ## Gradle
 
-    Version : 1.9
-    Install Location : /usr/local/gradle-1.9
+    Version : 1.8
+    Install Location : /usr/local/gradle-1.8
