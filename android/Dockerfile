@@ -11,7 +11,7 @@ MAINTAINER wasabeef <dadadada.chop@gmail.com>
 RUN yum -y groupinstall "Development Tools"
 
 # yum update
-# RUN yum -y update
+RUN yum -y update
 
 # Install java (OpenJDK)
 RUN yum -y install java-1.7.0-openjdk-devel
