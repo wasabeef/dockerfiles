@@ -29,11 +29,11 @@ RUN yum -y install libXrender.i686
 RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r22.3-linux.tgz && tar xf android-sdk_r22.3-linux.tgz
 
 # Install Android tools
-# RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tools --no-ui --force -a
-# RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a
-# RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-18 --no-ui --force -a
-# RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-19 --no-ui --force -a
-# RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter extra --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tools --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a
+#RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-18 --no-ui --force -a
+#RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-19 --no-ui --force -a
+#RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter extra --no-ui --force -a
 
 # Install Android NDK
 #RUN cd /usr/local && curl -L -O http://dl.google.com/android/ndk/android-ndk-r9b-linux-x86_64.tar.bz2 && tar xf android-ndk-r9b-linux-x86_64.tar.bz2
