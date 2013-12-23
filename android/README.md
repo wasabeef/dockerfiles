@@ -6,7 +6,7 @@ Dockerfile Android Development Environment
  * Android NDK r9b
  * Ant 1.9.2
  * Maven 3.1.1
- * Gradle 1.8
+ * Gradle 1.9
 
 
 ### Docker Index pull
@@ -39,5 +39,5 @@ Dockerfile Android Development Environment
 
 ## Gradle
 
-    Version : 1.8
-    Install Location : /usr/local/gradle-1.8
+    Version : 1.9
+    Install Location : /usr/local/gradle-1.9
