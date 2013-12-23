@@ -45,14 +45,14 @@ RUN cd /usr/local/ && curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist//a
 # RUN cd /usr/local/ && curl -L -O http://ftp.tsukuba.wide.ad.jp/software/apache/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz && tar xf apache-maven-3.1.1-bin.tar.gz
 
 # Install Gradle
-RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.8-all.zip && unzip -o gradle-1.8-all.zip
+RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-1.9-all.zip && unzip -o gradle-1.9-all.zip
 
 # Environment variables
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 #ENV ANDROID_NDK_HOME /usr/local/android-ndk-r9b
 ENV ANT_HOME /usr/local/apache-ant-1.9.2
 # ENV MAVEN_HOME /usr/local/apache-maven-3.1.1
-ENV GRADLE_HOME /usr/local/gradle-1.8
+ENV GRADLE_HOME /usr/local/gradle-1.9
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
 #ENV PATH $PATH:$ANDROID_NDK_HOME
